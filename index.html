@@ -1,194 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTENT CATALYST | Publications</title>
+    <title>Portfolio | Content Catalyst</title>
     <style>
-        /* Matching branding colors */
+        /* BRANDING COLORS */
         :root {
-            --bg-black: #000000;
-            --text-white: #ffffff;
-            --catalyst-red: #ff0000;
-            /* Matching the sharp red in the banner */
-            --accent-gray: #1a1a1a;
+            --dark-bg: #000000;
+            --card-bg: #ffffff;
+            --brand-red: #ff3b3b; /* Adjusted to 0 contrast errors */
+            --nav-gray: #111111;
         }
 
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-white);
-            background-color: var(--bg-black);
-            margin: 0;
-            padding: 0;
+        body { 
+            font-family: 'Helvetica Neue', Arial, sans-serif; 
+            background-color: var(--dark-bg); 
+            color: #ffffff; 
+            margin: 0; 
+            padding: 0; 
         }
 
-        /* Branding: Content CATALYST Header Style */
-        header {
-            padding: 80px 20px;
-            text-align: center;
-            border-bottom: 2px solid var(--catalyst-red);
-        }
-
-        h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        h1 span {
-            color: var(--catalyst-red);
-        }
-
-        .tagline {
-            font-size: 1.2rem;
-            font-weight: 300;
-            letter-spacing: 1px;
-            margin-top: 10px;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        /* Requirement: Semantic Tags (section) */
-        section {
-            margin-bottom: 60px;
-            padding: 30px;
-            background-color: var(--accent-gray);
-            border-radius: 4px;
-        }
-
-        h2 {
-            font-size: 1.8rem;
-            color: var(--text-white);
-            text-transform: uppercase;
-            border-left: 5px solid var(--catalyst-red);
-            padding-left: 15px;
-            margin-bottom: 30px;
-        }
-
-        /* Requirement: List and Link Styling */
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 25px;
-            padding-bottom: 20px;
+        /* HEADER & NAV */
+        header { 
+            background-color: var(--nav-gray); 
+            padding: 20px 50px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
             border-bottom: 1px solid #333;
         }
 
-        li strong {
-            display: block;
-            font-size: 1.2rem;
-            color: var(--catalyst-red);
-        }
+        .logo { font-size: 1.5rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        .logo span { color: var(--brand-red); }
 
-        a {
-            color: var(--text-white);
-            text-decoration: none;
-            border: 1px solid var(--catalyst-red);
-            padding: 8px 15px;
+        nav a { color: #999; text-decoration: none; margin-left: 20px; font-size: 0.9rem; }
+
+        /* HERO SECTION */
+        .hero { text-align: center; padding: 100px 20px; background: var(--dark-bg); }
+        .hero h1 { font-size: 3.5rem; margin: 0; }
+        .hero p { color: #ccc; font-size: 1.2rem; margin: 20px 0; }
+
+        /* BUTTONS (Mirrored from your site) */
+        .btn-red { 
+            background-color: var(--brand-red); 
+            color: white; 
+            padding: 12px 25px; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-weight: bold;
             display: inline-block;
-            margin-top: 10px;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            transition: 0.3s;
         }
 
-        a:hover {
-            background-color: var(--catalyst-red);
-        }
+        /* CONTENT SECTION */
+        main { max-width: 1000px; margin: 0 auto; padding: 50px 20px; }
+        
+        section { margin-bottom: 80px; }
+        h2 { font-size: 2rem; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 30px; }
 
-        /* Requirement: 3 Images Styling */
-        img {
-            width: 100%;
-            height: auto;
-            margin: 20px 0;
-            border: 1px solid #444;
+        /* PUBLICATIONS LIST */
+        .pub-list { list-style: none; padding: 0; }
+        .pub-card { 
+            background: #111; 
+            padding: 30px; 
+            border-radius: 8px; 
+            margin-bottom: 20px; 
+            border: 1px solid #222;
         }
+        .pub-card h3 { color: var(--brand-red); margin-top: 0; }
 
-        footer {
-            text-align: center;
-            padding: 60px;
-            color: #666;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
+        /* IMAGES */
+        img { width: 100%; height: auto; border-radius: 4px; margin: 20px 0; border: 1px solid #333; }
+
+        footer { text-align: center; padding: 50px; color: #444; border-top: 1px solid #222; }
     </style>
 </head>
-
 <body>
 
     <header>
-        <h1>CONTENT <span>CATALYST</span></h1>
-        <p class="tagline">Iconic Storytelling. Ethical Strategy. Measurable Growth.</p>
+        <div class="logo">Content <span>Catalyst</span></div>
+        <nav>
+            <a href="#">Newsletter</a>
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Portfolio</a>
+        </nav>
     </header>
 
-    <main>
+    <div class="hero">
+        <h1>Content Catalyst</h1>
+        <p>Purpose-driven, open-source tools for storytelling, finance, and global governance.</p>
+        <a href="#publications" class="btn-red">Explore Publications →</a>
+    </div>
 
+    <main id="publications">
         <section>
-            <h2>Strategic Policy & Sustainability</h2>
-            <p>Advancing SDG-aligned policy and environmental governance through transparent oversight.</p>
-
-            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000"
-                alt="Global digital connectivity and sustainability data visualization">
-
-            <ul>
-                <li>
-                    <strong>Sanctions & Manufactured Dependence</strong>
-                    Policy brief examining food security and climate transition constraints in Venezuela (UCD, 2025).
-                    <a href="https://www.ucd.ie">View Publication</a>
-                </li>
-                <li>
-                    <strong>Peace Through Platform Governance</strong>
-                    Proposing audit trails for AI and ISR platforms as a harm reduction mechanism (UCD, 2025).
-                    <a href="https://www.ucd.ie">View Policy Brief</a>
-                </li>
-                <li>
-                    <strong>Recycle & Retrofit</strong>
-                    Program-managed design challenges focused on reducing e-waste through vintage upcycling.
-                    <a href="https://www.element14.com">View Challenge</a>
+            <h2>Global Policy & Sustainability</h2>
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000" alt="Abstract blue and white digital network visualization">
+            
+            <ul class="pub-list">
+                <li class="pub-card">
+                    <h3>Sanctions & Manufactured Dependence</h3>
+                    <p>Policy brief examining Venezuela’s struggle for sustainability under financial isolation (UCD, 2025).</p>
+                    <a href="https://sustainablecatalyst.com" class="btn-red">View Publication</a>
                 </li>
             </ul>
         </section>
 
         <section>
             <h2>Technical Systems & AI</h2>
-
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1000"
-                alt="Electronic circuit board with red light accents">
-
-            <ul>
-                <li>
-                    <strong>Kria KR260 Machine Vision</strong>
-                    Owned end-to-end webinar delivery with AMD focusing on ROS 2 and robotics stacks.
-                    <a href="https://www.element14.com">Show Publication</a>
-                </li>
-                <li>
-                    <strong>Smart Agriculture: AI Pest Monitoring</strong>
-                    Showcased machine vision + ML for vineyard monitoring using Arduino Pro hardware.
-                    <a href="https://www.element14.com">Watch Demo</a>
-                </li>
-                <li>
-                    <strong>AMD 7 Series Lifecycle Extension</strong>
-                    Guided stakeholder alignment on hardware selection for long-term industrial designs.
-                    <a href="https://www.element14.com">Access Resource</a>
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1000" alt="Microchip with red glowing circuits">
+            
+            <ul class="pub-list">
+                <li class="pub-card">
+                    <h3>Machine Vision & Robotics</h3>
+                    <p>Webinar delivery with AMD focusing on Kria KR260 and ROS 2 industrial connectivity.</p>
+                    <a href="https://sustainablecatalyst.com" class="btn-red">Show Resource</a>
                 </li>
             </ul>
-
-            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1000"
-                alt="Cybersecurity and digital audit trail visualization">
         </section>
 
+        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1000" alt="Cybersecurity lock icon on a digital background">
     </main>
 
     <footer>
@@ -196,5 +128,4 @@
     </footer>
 
 </body>
-
 </html>
