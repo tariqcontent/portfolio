@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Content Catalyst | Portfolio</title>
+    <title>Portfolio | Content Catalyst</title>
     <style>
-        /* BRANDING COLORS FROM SCREENSHOT */
+        /* BRANDING COLORS: Clean cream body, black header, high-contrast red */
         :root {
             --header-black: #000000;
-            --body-bg: #fdfaf5; /* The light cream/off-white from your site */
+            --body-bg: #fdfaf5; 
             --catalyst-red: #e60000; 
             --text-dark: #1a1a1a;
             --card-border: #eeeeee;
@@ -22,7 +22,7 @@
             padding: 0; 
         }
 
-        /* HEADER (Black bar matching your site) */
+        /* HEADER: Matches your site navigation bar */
         header { 
             background-color: var(--header-black); 
             padding: 15px 40px; 
@@ -35,14 +35,13 @@
         .logo span { color: var(--catalyst-red); }
 
         nav a { color: #ffffff; text-decoration: none; margin-left: 20px; font-size: 0.85rem; opacity: 0.8; }
-        nav a:hover { opacity: 1; }
 
-        /* HERO AREA */
-        .hero { padding: 80px 40px; max-width: 1000px; margin: 0 auto; }
+        /* HERO AREA: Matching the layout of your homepage screenshot */
+        .hero { padding: 80px 40px; max-width: 1000px; margin: 0 auto; text-align: left; }
         .hero h1 { font-size: 2.8rem; margin: 0; color: var(--header-black); }
         .hero p { font-size: 1.1rem; color: #555; max-width: 600px; margin: 20px 0; }
 
-        /* BUTTONS (Matching your "Explore Tools" button) */
+        /* BUTTONS: High-contrast for WAVE tool compliance */
         .btn-red { 
             background-color: var(--catalyst-red); 
             color: white; 
@@ -51,4 +50,109 @@
             border-radius: 6px; 
             font-weight: bold;
             display: inline-block;
-            transition: 0.2s;
+        }
+
+        /* MAIN CONTENT STRUCTURE */
+        main { max-width: 1000px; margin: 0 auto; padding: 20px 40px; }
+        section { margin-bottom: 60px; }
+        h2 { font-size: 1.8rem; margin-bottom: 30px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+
+        /* GRID: Mirrors your "What We Make" section */
+        .grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 20px; 
+            list-style: none; 
+            padding: 0; 
+        }
+        
+        .pub-card { 
+            background: #ffffff; 
+            padding: 25px; 
+            border-radius: 8px; 
+            border: 1px solid var(--card-border);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+        .pub-card h3 { margin-top: 0; font-size: 1.1rem; color: var(--header-black); }
+        .pub-card p { font-size: 0.9rem; color: #666; margin-bottom: 0; }
+
+        /* IMAGES: Required for assignment and accessibility */
+        img { width: 100%; height: auto; border-radius: 4px; margin: 20px 0; border: 1px solid #ddd; }
+
+        footer { background: var(--header-black); color: #777; padding: 40px; text-align: center; margin-top: 60px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Content <span>Catalyst</span></div>
+        <nav>
+            <a href="https://sustainablecatalyst.com">Home</a>
+            <a href="#work">Foundations</a>
+            <a href="#work">Portfolio</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Content Catalyst</h1>
+        <p>Purpose-driven, open-source tools for storytelling, finance, and global governance.</p>
+        <a href="#work" class="btn-red">Explore Publications &rarr;</a>
+    </div>
+
+    <main id="work">
+        
+        <section>
+            <h2>Strategic Policy & Sustainability</h2>
+            
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000" alt="Global digital network interface representing governance data">
+            
+            <ul class="grid">
+                <li class="pub-card">
+                    <h3>Sanctions & Justice</h3>
+                    <p>Venezuela’s struggle for sustainability under financial isolation (UCD, 2025).</p>
+                </li>
+                <li class="pub-card">
+                    <h3>Platform Governance</h3>
+                    <p>Proposing audit trails for AI, cloud, and ISR platforms (UCD, 2025).</p>
+                </li>
+                <li class="pub-card">
+                    <h3>Vintage Upcycling</h3>
+                    <p>Program-managed design challenges for e-waste reduction (element14).</p>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Technical Engineering & AI</h2>
+            
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1000" alt="Microchip with red circuit lighting">
+            
+            <ul class="grid">
+                <li class="pub-card">
+                    <h3>Machine Vision Robotics</h3>
+                    <p>Kria KR260 webinar end-to-end delivery with AMD and element14.</p>
+                </li>
+                <li class="pub-card">
+                    <h3>Smart Agriculture AI</h3>
+                    <p>Pest monitoring using Arduino Nicla Vision and Machine Learning.</p>
+                </li>
+                <li class="pub-card">
+                    <h3>FPGA Lifecycle Support</h3>
+                    <p>Lifecycle extension webinar for AMD 7 Series FPGAs and SoCs.</p>
+                </li>
+            </ul>
+
+            <div style="margin-top: 30px;">
+                <a href="https://sustainablecatalyst.com" class="btn-red">Visit Live Website</a>
+            </div>
+        </section>
+
+        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1000" alt="Cybersecurity audit trail and digital lock visualization">
+    </main>
+
+    <footer>
+        <p>Brands aren't born legendary. &copy; 2026 CONTENT CATALYST</p>
+    </footer>
+
+</body>
+</html>
