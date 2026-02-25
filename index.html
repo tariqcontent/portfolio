@@ -3,129 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Content Catalyst</title>
+    <title>Content Catalyst | Portfolio</title>
     <style>
-        /* BRANDING COLORS */
+        /* BRANDING COLORS FROM SCREENSHOT */
         :root {
-            --dark-bg: #000000;
-            --card-bg: #ffffff;
-            --brand-red: #ff3b3b; /* Adjusted to 0 contrast errors */
-            --nav-gray: #111111;
+            --header-black: #000000;
+            --body-bg: #fdfaf5; /* The light cream/off-white from your site */
+            --catalyst-red: #e60000; 
+            --text-dark: #1a1a1a;
+            --card-border: #eeeeee;
         }
 
         body { 
             font-family: 'Helvetica Neue', Arial, sans-serif; 
-            background-color: var(--dark-bg); 
-            color: #ffffff; 
+            background-color: var(--body-bg); 
+            color: var(--text-dark); 
             margin: 0; 
             padding: 0; 
         }
 
-        /* HEADER & NAV */
+        /* HEADER (Black bar matching your site) */
         header { 
-            background-color: var(--nav-gray); 
-            padding: 20px 50px; 
+            background-color: var(--header-black); 
+            padding: 15px 40px; 
             display: flex; 
             justify-content: space-between; 
             align-items: center;
-            border-bottom: 1px solid #333;
         }
 
-        .logo { font-size: 1.5rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
-        .logo span { color: var(--brand-red); }
+        .logo { font-size: 1.4rem; font-weight: bold; text-transform: uppercase; color: white; letter-spacing: 1px; }
+        .logo span { color: var(--catalyst-red); }
 
-        nav a { color: #999; text-decoration: none; margin-left: 20px; font-size: 0.9rem; }
+        nav a { color: #ffffff; text-decoration: none; margin-left: 20px; font-size: 0.85rem; opacity: 0.8; }
+        nav a:hover { opacity: 1; }
 
-        /* HERO SECTION */
-        .hero { text-align: center; padding: 100px 20px; background: var(--dark-bg); }
-        .hero h1 { font-size: 3.5rem; margin: 0; }
-        .hero p { color: #ccc; font-size: 1.2rem; margin: 20px 0; }
+        /* HERO AREA */
+        .hero { padding: 80px 40px; max-width: 1000px; margin: 0 auto; }
+        .hero h1 { font-size: 2.8rem; margin: 0; color: var(--header-black); }
+        .hero p { font-size: 1.1rem; color: #555; max-width: 600px; margin: 20px 0; }
 
-        /* BUTTONS (Mirrored from your site) */
+        /* BUTTONS (Matching your "Explore Tools" button) */
         .btn-red { 
-            background-color: var(--brand-red); 
+            background-color: var(--catalyst-red); 
             color: white; 
-            padding: 12px 25px; 
+            padding: 12px 28px; 
             text-decoration: none; 
-            border-radius: 5px; 
+            border-radius: 6px; 
             font-weight: bold;
             display: inline-block;
-        }
-
-        /* CONTENT SECTION */
-        main { max-width: 1000px; margin: 0 auto; padding: 50px 20px; }
-        
-        section { margin-bottom: 80px; }
-        h2 { font-size: 2rem; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 30px; }
-
-        /* PUBLICATIONS LIST */
-        .pub-list { list-style: none; padding: 0; }
-        .pub-card { 
-            background: #111; 
-            padding: 30px; 
-            border-radius: 8px; 
-            margin-bottom: 20px; 
-            border: 1px solid #222;
-        }
-        .pub-card h3 { color: var(--brand-red); margin-top: 0; }
-
-        /* IMAGES */
-        img { width: 100%; height: auto; border-radius: 4px; margin: 20px 0; border: 1px solid #333; }
-
-        footer { text-align: center; padding: 50px; color: #444; border-top: 1px solid #222; }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="logo">Content <span>Catalyst</span></div>
-        <nav>
-            <a href="#">Newsletter</a>
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Portfolio</a>
-        </nav>
-    </header>
-
-    <div class="hero">
-        <h1>Content Catalyst</h1>
-        <p>Purpose-driven, open-source tools for storytelling, finance, and global governance.</p>
-        <a href="#publications" class="btn-red">Explore Publications →</a>
-    </div>
-
-    <main id="publications">
-        <section>
-            <h2>Global Policy & Sustainability</h2>
-            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000" alt="Abstract blue and white digital network visualization">
-            
-            <ul class="pub-list">
-                <li class="pub-card">
-                    <h3>Sanctions & Manufactured Dependence</h3>
-                    <p>Policy brief examining Venezuela’s struggle for sustainability under financial isolation (UCD, 2025).</p>
-                    <a href="https://sustainablecatalyst.com" class="btn-red">View Publication</a>
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Technical Systems & AI</h2>
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1000" alt="Microchip with red glowing circuits">
-            
-            <ul class="pub-list">
-                <li class="pub-card">
-                    <h3>Machine Vision & Robotics</h3>
-                    <p>Webinar delivery with AMD focusing on Kria KR260 and ROS 2 industrial connectivity.</p>
-                    <a href="https://sustainablecatalyst.com" class="btn-red">Show Resource</a>
-                </li>
-            </ul>
-        </section>
-
-        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1000" alt="Cybersecurity lock icon on a digital background">
-    </main>
-
-    <footer>
-        <p>Brands aren't born legendary. &copy; 2026 CONTENT CATALYST</p>
-    </footer>
-
-</body>
-</html>
+            transition: 0.2s;
